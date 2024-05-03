@@ -22,7 +22,7 @@ class AuthorSerializer(serializers.ModelSerializer):
         fields = ['id', 'name','books','ratings']
 
 
-# custom serializer (when model is connect with related name this method is used to exract parent data by calling child data )
+# custom serializer => (when model is connect with related name this method is used to exract parent data by calling child data )
        # methods in serializers
 class BookatSerializer(serializers.ModelSerializer):
        author_name = serializers.SerializerMethodField()   
@@ -105,8 +105,7 @@ class ProfessorSerializer(serializers.ModelSerializer):
         
 
 
-# extra method in serializers
-        
+# to add extra field in serializers
 
 class LibrarySerializer(serializers.ModelSerializer):
     date_new=  serializers.SerializerMethodField()

@@ -20,12 +20,13 @@ class BookList(APIView):
         serializer = BookatSerializer(Books, many=True)  # using custom serializer 
         return Response(serializer.data)
     
-# model 2
+# model 2  Views
 
 class collegeList(APIView):
     def get(self, request, format=None):
         coll = College.objects.all()
-        #serializer = College_nSerializer(coll, many=True) to use custom serlializers
+        #serializer = College_nSerializer(coll, many=True) to use custom serlializers =>department -> professors
+        # it gives  college -> department -> professors
         serializer = CollegeSerializer(coll, many=True)
         return Response(serializer.data)
 

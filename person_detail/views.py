@@ -15,7 +15,7 @@ from rest_framework.authtoken.models import Token
 #     return Response({"message": "Hello, world!"})
 
 
-# withou use id
+# without use id
 class home(APIView):
     def get(self, request, format=None):
         books = Person.objects.all()      
@@ -75,9 +75,10 @@ class RegistrationUser(APIView):
         
       
     
-
+# to display data on frontend
 def Display(request):
     return render(request, 'get.html')
 
+# to adding  data from frontend
 def Post(request):
     return render(request,'post.html')

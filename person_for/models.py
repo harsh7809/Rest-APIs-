@@ -1,6 +1,6 @@
 from django.db import models
 
-# model structure  author -> review,book
+# model structure = author -> review,book
 
 class Author(models.Model):
     id = models.AutoField(primary_key=True)  
@@ -23,7 +23,8 @@ class  Review(models.Model):
     author= models.ForeignKey(Author, on_delete=models.CASCADE,related_name="ratings")
 
 
-# model structure  college-> professor-> student
+
+# model structure = college-> professor-> Professor
 
 class College(models.Model):
     name=models.CharField(max_length=100)

@@ -11,7 +11,7 @@ urlpatterns = [
     path('post/',views.Post ),
     
     path('per',home.as_view()),
-    path('books/<int:pk>/', IndiviualDetail.as_view()),
+    path('perso/<int:pk>/', IndiviualDetail.as_view()),
     path('register/', RegistrationUser.as_view() ),
 ]
    
